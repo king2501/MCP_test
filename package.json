@@ -1,0 +1,22 @@
+{
+  "name": "pr_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "allure:generate": "allure generate ./allure-results -o ./allure-report --clean",
+    "allure:open": "allure open ./allure-report",
+    "test:allure": "npm run test && npm run allure:generate && npm run allure:open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "@allure-framework/allure-playwright": "^2.13.0"
+  }
+}
